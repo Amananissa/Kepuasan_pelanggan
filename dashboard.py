@@ -17,8 +17,8 @@ st.set_page_config(page_title="Dashboard Kepuasan Pelanggan", layout="wide")
 # -------------------------------
 @st.cache_data
 def load_data():
-    df = pd.read_excel("jawaban.csv", engine="openpyxl")
-    df.columns = df.columns.str.strip().str.lower().str.replace(" ", "_")
+   df = pd.read_csv("jawaban.csv")
+   df.columns = df.columns.str.strip().str.lower().str.replace(" ", "_")
     return df
 
 df = load_data()
