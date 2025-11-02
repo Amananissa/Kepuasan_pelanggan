@@ -17,7 +17,7 @@ st.set_page_config(page_title="Dashboard Kepuasan Pelanggan", layout="wide")
 # -------------------------------
 @st.cache_data
 def load_data():
-    df = pd.read_csv("jawaban.csv")
+    df = pd.read_csv("jawaban.csv", sep=",", encoding="utf-8", on_bad_lines="skip")
     return df
 
 
